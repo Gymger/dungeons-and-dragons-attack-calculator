@@ -1,3 +1,6 @@
+from random import random
+from random import randint
+
 def enem(num, die, dienum, mod):
     ''' Takes in the following values:
         
