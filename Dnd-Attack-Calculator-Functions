@@ -48,7 +48,9 @@ def beholder(i=0):
         if roll == 5:
             # Enervation Ray
             print("Enervation Ray:\n The targeted creature must succeed on a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.\n")
-
+            print("The Enervation Ray's necrotic damage is:")
+            enem(1,8,8,0)
+            print()
 
         if roll == 6:
             # Telekinetic Ray
@@ -66,10 +68,15 @@ def beholder(i=0):
         if roll == 9:
             # Disintegration Ray
             print("Disintegration Ray:\n If the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. If this damage reduces to creature to 0 hit points, its body becomes a pile of fine gray dust. \n If the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. If the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.\n")
-
+            print("The Disintegration Ray's force damage is:")            
+            enem(1,8,10,0)
+            print()
 
         if roll == 10:
             # Death Ray
             print("Death Ray:\n The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.\n")
-        
+            print("The Death Ray's necrotic damage is:")
+            enem(1,10,10,0)  
+            print()
         i-=1
+
