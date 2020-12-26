@@ -1,2 +1,2 @@
 # dungeons-and-dragons-attack-calculator
-  This is a project I'm using to develop my python programming skills.  The primary purpose of these functions is to make it easier to simulate Dungeons and Dragons (5th Edition) battles based on the many variables present in the rulebooks.  There's a lot of information to parse through, so there's plenty of material to shape this practice project.
+  Everything within this project is intended to fit to the Dungeons and Dragons 5e rules. I'm pretty basic in both my python familiarity as well as my github familiarity, so if anything gives the impression I don't know what I'm doing, there's a very realistic likelihood that's the case.
