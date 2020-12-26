@@ -3,6 +3,9 @@ Created on 26 December 2020
 @author: Gymger
 """
 
+from random import random
+from random import randint
+
 def beholder(i=3):
     '''
     The beholder() function takes in the number of "Eye Ray" actions that the beholder will take during a given turn (3 for a regular action, 1 for a legendary action).\n
