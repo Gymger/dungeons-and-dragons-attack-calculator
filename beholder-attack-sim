@@ -1,0 +1,77 @@
+"""
+Created on 26 December 2020
+@author: Gymger
+"""
+
+def beholder(i=3):
+    '''
+    The beholder() function takes in the number of "Eye Ray" actions that the beholder will take during a given turn (3 for a regular action, 1 for a legendary action).\n
+    
+    Bugs:\n
+    1. Repeat rolls are still possible results with this function. This needs to be removed.
+    2. The formatting is still cumbersome and I would like to draw it down so it's cleaner and easier for a DM to read.
+    '''
+    j = 0
+    rolls = [0,0,0]
+    while i > 0:
+        roll=randint(1,10)
+        for l in rolls:
+            while roll == l:
+                roll = randint(1,3)
+        
+        if roll == 1:
+            # Charm Ray
+            print("Charm Ray:\n The targeted creature must succeed on a DC 16 Wisdom saving throw or be charmed by the beholder for 1 hour, or until the beholder harms the creature.\n")
+            
+
+        elif roll == 2:
+            # Paralyzing Ray
+            print("Paralyzing Ray:\n The targeted creature must succeed on a DC 16 Constitution saving throw or be paralyzed for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n")
+
+        elif roll == 3:
+            # Fear Ray
+            print("Fear Ray:\n The targeted creature must succeed on a DC 16 Wisdom saving throw or be frightened for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n")
+
+
+        if roll == 4:
+            # Slowing Ray
+            print("Slowing Ray:\n The targeted creature must succeed on a DC 16 Dexterity saving throw. On a failed save, the target's speed is halved for 1 minute. In addition, the creature can't take reactions, and it can take either an action or a bonus action on its turn, not both. The creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.\n")
+            
+
+        if roll == 5:
+            # Enervation Ray
+            print("Enervation Ray:\n The targeted creature must succeed on a DC 16 Constitution saving throw, taking 36 (8d8) necrotic damage on a failed save, or half as much damage on a successful one.\n")
+            print("The Enervation Ray's necrotic damage is:")
+            enem(1,8,8,0)
+            print()
+
+        if roll == 6:
+            # Telekinetic Ray
+            print("Telekinetic Ray:\n If the target is a creature, it must succeed on a DC 16 Strength saving throw or the beholder moves it up to 30 feet in any direction. It is restrained by the ray's telekinetic grip until the start of the beholder's next turn or until the beholder is incapacitated. \n If the target is an object weighing 300 pounds or less that isn't being worn or carried, it is moved up to 30 feet in any direction. the beholder can also exert fine control on objects with this ray, such as manipulating a simple tool or opening a door or container.\n")
+
+
+        if roll == 7:
+            # Sleep Ray
+            print("Sleep Ray:\n The targeted creature must succeed on a DC 16 Wisdom saving throw or fall asleep and remain unconscious for 1 minute. The target awakens if it takes damage or another creature takes an action to wake it. This ray has no effect on constructs and undead.\n")
+
+        if roll == 8:
+            # Petrification Ray
+            print("Petrification Ray:\n The targeted creature must make a DC 16 Dexterity saving throw. On a failed save, the creature begins to turn to stone and is restrained. It must repeat the saving throw at the end of its next turn. On a success, the effect ends. On a failure, the creature is petrified until freed by the greater restoration spell or other magic.\n")
+
+        if roll == 9:
+            # Disintegration Ray
+            print("Disintegration Ray:\n If the target is a creature, it must succeed on a DC 16 Dexterity saving throw or take 45 (10d8) force damage. If this damage reduces to creature to 0 hit points, its body becomes a pile of fine gray dust. \n If the target is a Large or smaller nonmagical object or creation of magical force, it is disintegrated without a saving throw. If the target is a Huge or larger object or creation of magical force, this ray disintegrates a 10-foot cube of it.\n")
+            print("The Disintegration Ray's force damage is:")            
+            enem(1,8,10,0)
+            print()
+
+        if roll == 10:
+            # Death Ray
+            print("Death Ray:\n The targeted creature must succeed on a DC 16 Dexterity saving throw or take 55 (10d10) necrotic damage. The target dies if the ray reduces it to 0 hit points.\n")
+            print("The Death Ray's necrotic damage is:")
+            enem(1,10,10,0)  
+            print()
+        rolls[j] = roll
+        j+=1
+        i-=1
+    print(rolls)
