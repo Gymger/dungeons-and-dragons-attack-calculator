@@ -1,17 +1,10 @@
-"""
-Created on 26 December 2020
-@author: Gymger
-"""
-
-from random import random
-from random import randint
-
 def beholder(i=3):
     '''
-    The beholder() function takes in the number of "Eye Ray" actions that the beholder will take during a given turn (3 for a regular action, 1 for a legendary action).\n
+    The beholder() function takes in the number of "Eye Ray" actions that the beholder will take during a given turn based on user input.\n
+    Currently, the function is set to 3 automatically, as the beholder's default move contains three attacks, whereas a legendary action adds an additional 1 attack.\n
     
     Bugs:\n
-    1. Repeat rolls are still possible results with this function. This needs to be removed.
+    1. CORRECTED 26 December 20: Repeat rolls are still possible results with this function. This needs to be removed.
     2. The formatting is still cumbersome and I would like to draw it down so it's cleaner and easier for a DM to read.
     '''
     j = 0
