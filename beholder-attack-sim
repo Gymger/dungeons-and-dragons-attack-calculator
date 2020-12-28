@@ -1,8 +1,12 @@
 """
 Created by Gymger
-Date: 24 December 2020
+Date: 23 December 2020
 Development: Ongoing (WIP)
 """
+
+from random import random
+from random import randint
+
 
 def beholder(i=3):
     '''
