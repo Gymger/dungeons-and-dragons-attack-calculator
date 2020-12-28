@@ -1,3 +1,9 @@
+"""
+Created by Gymger
+Date: 24 December 2020
+Development: Ongoing (WIP)
+"""
+
 def beholder(i=3):
     '''
     The beholder() function takes in the number of "Eye Ray" actions that the beholder will take during a given turn based on user input.\n
