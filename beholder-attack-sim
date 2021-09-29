@@ -4,7 +4,6 @@ Date: 23 December 2020
 Development: Ongoing (WIP)
 """
 
-from random import random
 from random import randint
 
 def enem(num, die, dienum, mod):
